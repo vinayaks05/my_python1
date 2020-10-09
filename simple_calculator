@@ -1,0 +1,17 @@
+a = input('enter number ')
+b = input('enter second number ')
+c = input('enter operation ')
+try :
+    a = int(a)
+    b = int(b)
+except :
+    print("invalid operation")
+    quit()
+if (c == '+') :
+    print(a + b)
+elif (c == '-') :
+    print(a - b)
+elif (c == '*') :
+    print(a*b)
+else :
+    print('sorry :-)')
