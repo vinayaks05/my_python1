@@ -1,0 +1,43 @@
+#
+s = int(input())
+m = int(input())
+t = int(input())
+w = int(input())
+th = int(input())
+f = int(input())
+st = int(input())
+tot = m + t + w + th + f
+tot = int(tot)
+tm = 0
+tm = int(tm)
+def money():
+    global tm
+    if (m >= 8):
+        tm = tm + 15*(m - 8) + 100*(8)
+    elif(m < 8):
+        tm = tm + m*100
+    if (t >= 8):
+        tm = tm + 15*(t - 8) + 100*8
+    elif(t < 8):
+        tm = tm + t*100
+    if (w >= 8):
+        tm = tm + 15*(w - 8) + 8*100
+    elif(w < 8):
+        tm = tm + w*100
+    if (th >= 8):
+        tm = tm + 15*(th - 8) + 8*100
+    elif(th < 8):
+        tm = tm + th*100
+    if (f >= 8):
+        tm = tm + 15*(f - 8) + 100*8
+    elif(f < 8):
+        tm = tm + f*100
+if (tot > 40 and s == 0 and st == 0):
+    money()
+    tm = tm + 25*(tot - 40)
+elif (tot < 40):
+    money()
+    tm = tm + s*150 + st*125
+else:
+    print("check")
+print(tm)
